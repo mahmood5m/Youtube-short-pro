@@ -1,0 +1,28 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt — YouTube → Vertical Short Generator
+# Install with: pip install -r requirements.txt
+#
+# FFmpeg is NOT installable via pip. On Streamlit Community Cloud, add a
+# packages.txt file (see README instructions below) with:
+#   ffmpeg
+# Locally on macOS:  brew install ffmpeg
+# Locally on Ubuntu: sudo apt install ffmpeg
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Web framework
+streamlit>=1.35.0
+
+# YouTube downloader — maintained fork, handles age-gated & recent changes
+yt-dlp>=2024.5.1
+
+# Microsoft Edge TTS (free, no API key needed)
+edge-tts>=6.1.10
+
+# Async support (edge-tts uses asyncio)
+aiohttp>=3.9.0
+
+# Lightweight video probing (ffprobe wrapper — optional but handy)
+# moviepy is intentionally omitted: we drive FFmpeg directly via subprocess
+# to avoid MoviePy's heavy import overhead on cloud hardware.
+# If you prefer MoviePy for composition, uncomment:
+# moviepy>=1.0.3
