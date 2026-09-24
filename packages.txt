@@ -1,5 +1,2 @@
-# packages.txt — system-level apt packages installed by Streamlit Community Cloud
-# This file is REQUIRED because FFmpeg cannot be installed via pip.
-# Streamlit Cloud reads this file automatically during build.
 ffmpeg
 fonts-dejavu
